@@ -177,7 +177,7 @@ class GuildFeature(Feature):
             "There may be other reasons that persist these permissions even if you change the things displayed."
         )
 
-        embed = discord.Embed(color=0x00FF00, description=description)
+        embed = discord.Embed(color=0x2f3136, description=description)
 
         allows: typing.List[str] = []
         denies: typing.List[str] = []
