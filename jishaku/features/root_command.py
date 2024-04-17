@@ -163,10 +163,10 @@ class RootCommand(Feature):
                 description="\n".join(summary),
                 color=0x2f3136)
         hacker.set_footer(text=f"Average websocket latency: {round(self.bot.latency * 1000, 2)}ms",
-                             icon_url=self.bot.user.avatar.url)
-        hacker.set_thumbnail(url=self.bot.user.avatar.url)
-        hacker.set_author(name=ctx.author,icon_url=ctx.author.avatar.url
-                if ctx.author.avatar else ctx.author.avatar.url)
+                             icon_url=self.bot.user.avatar)
+        hacker.set_thumbnail(url=self.bot.user.avatar)
+        hacker.set_author(name=ctx.author,icon_url=ctx.author.avatar
+                if ctx.author.avatar else ctx.author.avatar)
         await ctx.send(embed=hacker)
 
     # pylint: disable=no-member
