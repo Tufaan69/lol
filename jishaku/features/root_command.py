@@ -159,15 +159,15 @@ class RootCommand(Feature):
 
         # Show websocket latency in milliseconds
         summary.append(f"Average websocket latency: {round(self.bot.latency * 1000, 2)}ms")
-        hacker = discord.Embed(
+        embed = discord.Embed(
                 description="\n".join(summary),
-                color=0x2f3136)
-        hacker.set_footer(text=f"Average websocket latency: {round(self.bot.latency * 1000, 2)}ms",
+                color=0xffffff)
+        embed.set_footer(text=f"Average websocket latency: {round(self.bot.latency * 1000, 2)}ms",
                              icon_url=self.bot.user.avatar)
-        hacker.set_thumbnail(url=self.bot.user.display_avatar.url)
-        hacker.set_author(name=ctx.author,icon_url=ctx.author.display_avatar
+        embed.set_thumbnail(url=self.bot.user.display_avatar.url)
+        embed.set_author(name=ctx.author,icon_url=ctx.author.display_avatar
                 if ctx.author.avatar else ctx.author.display_avatar.url)
-        await ctx.send(embed=hacker)
+        await ctx.send(embed=embed)
 
     # pylint: disable=no-member
     @Feature.Command(parent="jsk", name="hide")
