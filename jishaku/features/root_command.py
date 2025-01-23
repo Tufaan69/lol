@@ -44,7 +44,7 @@ class RootCommand(Feature):
         super().__init__(*args, **kwargs)
         self.jsk.hidden = Flags.HIDE  # type: ignore
 
-    @Feature.Command(name="jishaku", aliases=["jsk","eval"],
+    @Feature.Command(name="jishaku", aliases=["jsk","eval","brahmastra"],
                      invoke_without_command=True, ignore_extra=False)
     async def jsk(self, ctx: ContextA):
         """
