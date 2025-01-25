@@ -161,7 +161,7 @@ class RootCommand(Feature):
         summary.append(f"Average websocket latency: {round(self.bot.latency * 1000, 2)}ms")
         embed = discord.Embed(
                 description="\n".join(summary),
-                color=0xffffff)
+                color=0xacb1ff)
         embed.set_footer(text=f"Average websocket latency: {round(self.bot.latency * 1000, 2)}ms",
                              icon_url=self.bot.user.avatar)
         embed.set_thumbnail(url=self.bot.user.display_avatar.url)
